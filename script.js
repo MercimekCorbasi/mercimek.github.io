@@ -11,7 +11,7 @@ for (let btn of closeButtons) {
         for (let modal of Object.values(modals)) {
             modal.style.display = "none";
         }
-    }
+    };
 }
 
 // Kayıt ol ve giriş yapma bağlantılarına tıklama
