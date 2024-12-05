@@ -1,28 +1,56 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-btn {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #444;
+    color: white;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: -200px; /* Başlangıçta gizli */
+    transition: left 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav.hidden {
+    left: -200px; /* Gizli durumda */
+}
+
+nav.visible {
+    left: 0; /* Görünür durumda */
 }
 
 main {
+    margin-left: 20px;
     padding: 20px;
-    text-align: center;
-}
-
-footer {
-    background: #35424a;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
