@@ -2,30 +2,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.menu-btn {
-    font-size: 30px;
-    cursor: pointer;
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
 }
 
 nav {
-    background-color: #444;
-    color: white;
-    width: 200px;
-    position: absolute;
-    top: 0;
-    left: -200px; /* Başlangıçta gizli */
-    transition: left 0.3s ease;
+    background: #35424a;
+    padding: 10px 0;
 }
 
 nav ul {
@@ -33,24 +22,44 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
-    padding: 10px;
+nav li {
+    display: inline;
+    margin: 0 20px;
 }
 
-nav ul li a {
+button {
+    padding: 10px 15px;
+    background-color: #5bc0de;
     color: white;
-    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-nav.hidden {
-    left: -200px; /* Gizli durumda */
-}
-
-nav.visible {
-    left: 0; /* Görünür durumda */
+button:hover {
+    background-color: #31b0d5;
 }
 
 main {
-    margin-left: 20px;
     padding: 20px;
+    text-align: center;
+}
+
+.content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
