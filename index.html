@@ -4,38 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Modern Web Sitesi</title>
+    <title>Alışveriş Sitesi</title>
 </head>
 <body>
     <header>
-        <h1>Modern Web Sitesi</h1>
+        <h1>Alışveriş Sitesi</h1>
         <nav>
             <ul>
-                <li><button id="button1">Hizmetler</button></li>
-                <li><button id="button2">Ürünler</button></li>
-                <li><button id="button3">İletişim</button></li>
+                <li><a href="#register">Kayıt Ol</a></li>
+                <li><a href="#login">Giriş Yap</a></li>
             </ul>
         </nav>
     </header>
-    <section class="category-container">
-        <div class="category-box">Kategoriler 1</div>
-        <div class="category-box">Kategoriler 2</div>
-        <div class="category-box">Kategoriler 3</div>
-        <div class="category-box">Kategoriler 4</div>
-        <div class="category-box">Kategoriler 5</div>
-        <div class="category-box">Kategoriler 6</div>
-    </```html
-  <div class="category-box">Kategoriler 7</div>
-  <div class="category-box">Kategoriler 8</div>
- </section>
- <main>
-  <div class="content" id="content">
-   Burada içerik görüntülenecek.
-  </div>
- </main>
- <footer>
-  <p>&copy; 2023 Modern Web Sitesi. Tüm hakları saklıdır.</p>
- </footer>
- <script src="script.js"></script>
+    <main>
+        <section class="categories">
+            <h2>Kategoriler</h2>
+            <div class="category" id="bags">Çantalar</div>
+            <div class="category" id="clothes">Elbiseler</div>
+            <div class="category" id="shoes">Ayakkabılar</div>
+            <div class="category" id="accessories">Aksesuarlar</div>
+        </section>
+        <section class="products">
+            <h2>Popüler Ürünler</h2>
+            <div class="product">Ürün 1</div>
+            <div class="product">Ürün 2</div>
+            <div class="product">Ürün 3</div>
+            <div class="product">Ürün 4</div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Alışveriş Sitesi. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <div id="register" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Kayıt Ol</h2>
+            <form id="register-form">
+                <input type="text" placeholder="Kullanıcı Adı" required>
+                <input type="email" placeholder="E-posta" required>
+                <input type="password" placeholder="Şifre" required>
+                <button type="submit">Kayıt Ol</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="login" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Giriş Yap</h2>
+            <form id="login-form">
+                <input type="email" placeholder="E-posta" required>
+                <input type="password" placeholder="Şifre" required>
+                <button type="submit">Giriş Yap</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
