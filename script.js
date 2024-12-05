@@ -1,11 +1,33 @@
-document.getElementById('button1').addEventListener('click', function() {
-    document.getElementById('content').innerHTML = "<h2>Hizmetler</h2><p>Bizim sunduğumuz hizmetler hakkında bilgiler burada yer alacak.</p>";
-});
+// Modal açma ve kapama
+const modals = {
+    register: document.getElementById('register'),
+    login: document.getElementById('login'),
+};
 
-document.getElementById('button2').addEventListener('click', function() {
-    document.getElementById('content').innerHTML = "<h2>Ürünler</h2><p>Ürünlerimiz hakkında detaylı bilgiler burada yer alacak.</p>";
-});
+const closeButtons = document.getElementsByClassName('close');
 
-document.getElementById('button3').addEventListener('click', function() {
-    document.getElementById('content').innerHTML = "<h2>İletişim</h2><p>Bize ulaşmak için iletişim bilgilerimiz burada yer alacak.</p>";
-});
+for (let btn of closeButtons) {
+    btn.onclick = function() {
+        for (let modal of Object.values(modals)) {
+            modal.style.display = "none";
+        }
+    }
+}
+
+// Kayıt ol ve giriş yapma bağlantılarına tıklama
+document.querySelector('nav a[href="#register"]').onclick = function() {
+    modals.register.style.display = "block";
+};
+
+document.querySelector('nav a[href="#login"]').onclick = function() {
+    modals.login.style.display = "block";
+};
+
+// Dışarıya tıkladığında modal kapama
+window.onclick = function(event) {
+    for (let modal of Object.values(modals)) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+};
